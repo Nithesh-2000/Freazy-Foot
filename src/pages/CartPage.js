@@ -25,7 +25,7 @@ function CartPage() {
         <div key={item.id} className="cart-item">
           <img src={item.image} alt={item.name} />
           <h3>{item.name}</h3>
-          <p>₹{item.price}</p>
+          <p><b>₹{item.price}</b></p>
           <div className="quantity">
             <button onClick={() => handleDecreaseQuantity(item.id)}>-</button>
             <span>{item.quantity}</span>
@@ -35,9 +35,13 @@ function CartPage() {
         </div>
       ))}
       <div className="total">
-        Total: ₹{cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}
+        <b>Total: ₹{cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}</b>
       </div>
+      {/* <div>
+      <img src="s-img3.png" alt="Image 1"></img>
+      </div> */}
     </div>
+    
   );
 }
 

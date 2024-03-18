@@ -4,7 +4,7 @@ import { addToCart } from '../features/cart/cartSlice';
 
 function ProductsPage() {
   const products = useSelector((state) => state.products);
-  const cart = useSelector((state) => state.cart); // Get the cart state
+  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   const handleAddToCart = (product) => {
@@ -14,15 +14,16 @@ function ProductsPage() {
   return (
     <div className='products-full'>
     <div className="products">
-      <h2>Welcome to our Store!</h2>
-      <h2>Products</h2>
+      {/* <h2>Welcome to our Store!</h2> */}
+      <h2>SHOES</h2>
       <div className="product-list">
         {products.map((product) => (
           <div key={product.id} className="product">
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
-            <p>{product.price}</p>
+            <p><b>₹{product.price}</b></p>
             <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
+            <p>FREE Delivery by <b>Freazy-Foot</b></p>
           </div>
         ))}
       </div>  

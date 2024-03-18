@@ -168,7 +168,7 @@ code {
   /* margin-top: 20%; */
   margin-left: 45%;
   font-family: 'Raleway', sans-serif; /* Using Google Font Raleway for a sleek look */
-  font-size: 60px; /* Adjust font size as needed */
+  font-size: 70px; /* Adjust font size as needed */
   text-align: center;
   margin-bottom: 30px; /* Add spacing below the brand name */
   color: #fff; /* White color for better visibility */
@@ -183,11 +183,20 @@ code {
 
 @keyframes neonGlow {
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #ff9a44, 0 0 15px #ff9a44, 0 0 20px #ff9a44, 0 0 25px #ff9a44, 0 0 30px #ff9a44, 0 0 35px #ff9a44;
+    text-shadow: 0 0 5px #fff, 0 0 10px #1f1e1e, 0 0 15px #1f1e1e, 0 0 20px #1f1e1e, 0 0 25px #1f1e1e, 0 0 30px #1f1e1e, 0 0 35px #1f1e1e;
   }
   to {
-    text-shadow: 0 0 10px #fff, 0 0 15px #ff9a44, 0 0 20px #ff9a44, 0 0 25px #ff9a44, 0 0 30px #ff9a44, 0 0 35px #ff9a44, 0 0 40px #ff9a44;
+    text-shadow: 0 0 10px #fff, 0 0 15px #1f1e1e, 0 0 20px #1f1e1e, 0 0 25px #1f1e1e, 0 0 30px #1f1e1e, 0 0 35px #1f1e1e, 0 0 40px #1f1e1e;
   }
+}
+
+/* .bg5r{
+  position: absolute;
+} */
+
+.slogan{
+/* padding-top: 20px; */
+margin-left: 60%;
 }
 
 
@@ -200,16 +209,17 @@ code {
   align-items: center;
   justify-content: space-around;
   list-style: none; 
-  padding: 20px;
-  background-color: #b36b00ab;
+  padding: 10px;
+  background-color: #d68916;
   font-weight: bolder;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.897);
   margin: 0px;
+  font-size: 20px;
 }
 
 .nav-icon {
-  width: 70px; 
-  height: 50px;
+  width: 15%; 
+  height: auto;
   vertical-align: middle; 
 }
 
@@ -229,7 +239,7 @@ code {
 }
 
 .navbar-container {
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   z-index: 1000;
 }
@@ -264,15 +274,43 @@ code {
   height: 200px;
   width: 200px;
 }
-/* .cart-icon{
-  color: #333;
-} */
+
+.simg1{
+  margin-left: 69%;
+  height: 300px;
+  width: 400px;
+  position: absolute;
+  top: 25%;
+}
 
 /*Product Page*/
 
+
+.products-full {
+  position: relative;
+}
+
+.products-full::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/bg1.png');
+  opacity: 0.3; /* Adjust opacity here */
+}
+
+/* Optionally, you might want to ensure the content is above the pseudo-element */
+.products-full > * {
+  position: relative;
+  z-index: 1;
+}
+
+
 .products {
   margin: 50px auto;
-  max-width: 1400px;
+  max-width: 1500px;
   padding: 20px;
 }
 
@@ -284,45 +322,60 @@ code {
   color: #333;
 }
 
+.products h2:hover{
+  color: #b36b00;
+}
+
 .product-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  /* width: 100%; */
 }
+
+/* .product-list p:hover{
+  color: white;
+} */
 
 
 .product {
-  background-color: #fff;
+  /* width: 100%; */
+  background-color: white;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.226);
-  transition: transform 0.3s ease;
+  transition:  .5s ease all;
 }
 
 .product:hover {
   transform: translateY(-5px);
-  background-color: #b36b0079;
+  box-shadow: 10px 12px 5px rgba(0, 0, 0, 0.432);
+  /* background-color: #ce9f58; */
 }
 
 .product img {
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 300px;
   border-radius: 10px;
   margin-bottom: 15px;
-  object-fit: cover;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.product img:hover {
+  transform: rotateY(10deg) scale(1.1);
 }
 
 
 .product h3 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #333;
+  color: black;
 }
 
 .product p {
   font-size: 18px;
   margin-bottom: 15px;
-  color: #666;
+  color: black;
 }
 
 
@@ -444,7 +497,7 @@ code {
 
 /*Cart Page*/
 .cart {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
   border: white;
@@ -452,9 +505,9 @@ code {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.226);
   min-height: 622px; /* Adjust height as needed */
-  /* background-image: url('/public/cart3.jpg'); */
-  background-size: cover; /* Ensures the background image covers the entire element */
-  background-repeat: no-repeat;
+  background-image: url('/public/s-img3.png');
+  background-size: contain; /* Ensures the background image covers the entire element */
+  background-repeat: repeat;
 }
 
 
