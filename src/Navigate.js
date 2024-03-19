@@ -1,46 +1,73 @@
 import React from 'react'
 import { Routes, Route , Link } from "react-router-dom";
 import ProductsPage from './pages/ProductsPage';
+import ProductsPage2 from './pages/ProductsPage2';
+import ProductsPage3 from './pages/ProductsPage3';
 import CartPage from './pages/CartPage';
 import Register from './pages/register';
 import Home from './pages/Home';
 import './index.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
+import { Dropdown } from '@mui/base/Dropdown';
+import { MenuButton } from '@mui/base/MenuButton';
+import { Menu } from '@mui/base/Menu';
+import { MenuItem } from '@mui/base/MenuItem';
 
 function Navigate() {
   const cart = useSelector((state) => state.cart);
   
   return (
     <>
-    <div className="navbar-container">
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className='nav'>
-        <ul className="navbar-nav mr-auto">
-          <div className='brand-icon'>
-        <li><Link to={'/'} className="nav-link">
-           <img src="ff4.png" alt="Home" class="nav-icon"></img> 
-        </Link></li>
+   <div className="navbar-container">
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <div className='nav'>
+      <ul className="navbar-nav mr-auto">
+        <div className='brand-icon'>
+          <li>
+            <Link to={'/'} className="nav-link">
+              <img src="ff4.png" alt="Home" className="nav-icon" />
+            </Link>
+          </li>
         </div>
         <div className='links'>
-          <li><Link to={'/ProductsPage'} className="nav-link">Products </Link></li>
-          {/* <li className='ff'>FREAZY-FOOT</li> */}
-          <li><Link to={'/CartPage'} className="nav-link"> 
-          <div className="cart-icon">
+          <li>
+            <Link className="nav-link">Products </Link>
+            <div className="dropdown-menu">
+              <ul>
+                <li><Link to={'/ProductsPage'} className="dropdown-link">Formal Shoes</Link></li>
+                <li><Link to={'/ProductsPage2'} className="dropdown-link">Casual Shoes</Link></li>
+                <li><Link to={'/ProductsPage3'} className="dropdown-link">Sports Shoes</Link></li>
+              </ul>
+            </div>
+          </li>
+          {/* Other navbar items */}
+          <li>
+            <Link to={'/CartPage'} className="nav-link"> 
+              <div className="cart-icon">
                 <FaShoppingCart /><span>{cart.length}   My Cart</span> 
-          </div></Link></li>
-          <li><Link to={'/register'} className="nav-link">Register </Link></li>     
-          </div>    
-        </ul>
-      </div>
-    </nav>
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link to={'/register'} className="nav-link">Register </Link>
+          </li>
+        </div>    
+      </ul>
     </div>
+  </nav>
+</div>
+
 
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/ProductsPage" element={<ProductsPage />} />
+        <Route path="/ProductsPage2" element={<ProductsPage2 />} />
+        <Route path="/ProductsPage3" element={<ProductsPage3 />} />
         <Route path="/CartPage" element={<CartPage />} />
         <Route path="/register" element={<Register />} />
+
+
       </Routes>
 
         <footer className="footer">

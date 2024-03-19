@@ -133,7 +133,40 @@ margin-left: 64%;
 
 /*Navbar*/
 
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f1b355;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.nav-link:hover + .dropdown-menu {
+  display: block;
+  margin-top: 26px;
+  margin-right: 25px;
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdown-menu ul li {
+  padding: 10px;
+}
+
+.dropdown-menu ul li:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-link {
+  text-decoration: none;
+  color: black;
+}
+
 .navbar-nav {
+  margin: 0px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -144,6 +177,7 @@ margin-left: 64%;
   margin: 0px;
   font-size: 20px;
   font-family: monospace;
+  width: 100% !important;
 }
 
 .nav-icon {
@@ -358,7 +392,7 @@ margin-left: 64%;
 }
 
 .container form label {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .container {
@@ -418,6 +452,11 @@ margin-left: 64%;
 
 /*Cart Page*/
 
+.cart-body{
+  /* background-image: url('/public/bg11.png'); */
+  /* background-repeat: no-repeat; */
+}
+
 .cart {
   max-width: 1000px;
   margin: 0 auto;
@@ -428,6 +467,7 @@ margin-left: 64%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.226);
   min-height: 622px; /* Adjust height as needed */
   background-image: url('/public/s-img3.png');
+  /* background-image: url('/public/bg8.jpg'); */
   background-size: contain; /* Ensures the background image covers the entire element */
   background-repeat: repeat;
 }

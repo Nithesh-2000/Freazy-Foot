@@ -52,6 +52,7 @@ const RegistrationPage = () => {
   };
 
   return (
+    <div className='reg-body'>
     <div className='container'>
       <h2>REGISTRATION</h2>
       <form onSubmit={handleSubmit}>
@@ -101,6 +102,7 @@ const RegistrationPage = () => {
         </div>
         <button type="submit">Register</button>
       </form>
+    </div>
     </div>
   );
 };

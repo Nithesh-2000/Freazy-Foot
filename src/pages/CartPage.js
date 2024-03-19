@@ -19,6 +19,7 @@ function CartPage() {
   };
 
   return (
+    <div className='cart-body'>
     <div className="cart">
       <h2>Cart</h2>
       {cart.map((item) => (
@@ -40,6 +41,7 @@ function CartPage() {
       {/* <div>
       <img src="s-img3.png" alt="Image 1"></img>
       </div> */}
+    </div>
     </div>
     
   );
