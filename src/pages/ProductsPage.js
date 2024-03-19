@@ -14,16 +14,19 @@ function ProductsPage() {
   return (
     <div className='products-full'>
     <div className="products">
-      {/* <h2>Welcome to our Store!</h2> */}
       <h2>SHOES</h2>
       <div className="product-list">
         {products.map((product) => (
           <div key={product.id} className="product">
+            <div className='prod-img'>
             <img src={product.image} alt={product.name} />
+            </div>
+            <div className='prod-details'>
             <h3>{product.name}</h3>
             <p><b>₹{product.price}</b></p>
             <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
             <p>FREE Delivery by <b>Freazy-Foot</b></p>
+            </div>
           </div>
         ))}
       </div>  

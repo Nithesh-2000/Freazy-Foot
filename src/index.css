@@ -1,46 +1,13 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #e5de9b;
-} */
-
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
-  /* background: linear-gradient(to bottom, #fff, #e5de9b); */
-  /* overflow: hidden;  */
+
 }
-
-/* .smoke-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1; 
-} */
-
-/* .smoke {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.1); 
-  border-radius: 50%;
-  animation: smoke-rise 5s linear infinite, smoke-drift 10s linear infinite; 
-} */
 
 @keyframes smoke-rise {
   0% {
@@ -65,90 +32,39 @@ body {
   }
 }
 
-/* .light-effect {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.1) 70%); 
-  border-radius: 50%; 
-  transform: translate(-50%, -50%);
-  pointer-events: none; 
-  z-index: 2; 
-} */
-
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-/* .home-container {
-  margin: auto;
-  padding: 20px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  width: 70%;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: cover;
-  
-} */
-
-/* .home-page{
-  min-height: 661px;  
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.home-head{
+  margin: 0px auto;
 }
 
-
-
-.home-container {
-  width: 500px; 
-  height: auto;
-  overflow: hidden; 
-  position: relative; 
-  margin: auto;
-  padding: 20px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+.home-body{
+  background-image: url('/public/bg6.jpg');
+  background-size: contain;
+  background-position: bottom;
 }
-
-.home-container img {
-  width: 100%; 
-  height: auto; 
-  display: block; 
-} */
-
-/* .cont-1{
-  display: flex;
-} */
 
 .home-page {
-  min-height: 661px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: contain;
 }
 
 .home-container {
-  max-width: 700px; /* Adjust the maximum width as per your requirement */
+  max-width: 700px; 
   height: auto;
   overflow: hidden;
   position: relative;
   margin: auto;
   padding: 20px;
-  margin-top: 30px;
   margin-bottom: 30px;
-  border-radius: 10px; /* Adds a rounded corner for a modern look */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  border-radius: 10px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .home-container img {
@@ -157,17 +73,34 @@ code {
   display: block; 
   border-radius: 10px; /* Ensures the image corners match the container */
   object-fit: cover; /* Ensures the image covers the container without stretching */
-  transition: transform 0.3s ease; /* Adds a smooth transition effect on hover */
+  transition: transform 0.3s ease; 
 }
 
 .home-container:hover img {
   transform: scale(1.05); /* Slightly scales up the image on hover for an interactive effect */
 }
 
-.brand-text {
-  /* margin-top: 20%; */
+.brand-text1 {
+  margin-top: 0px;
   margin-left: 45%;
-  font-family: 'Raleway', sans-serif; /* Using Google Font Raleway for a sleek look */
+  font-family: cursive;
+  font-size: 70px; /* Adjust font size as needed */
+  text-align: center;
+  margin-bottom: 30px; /* Add spacing below the brand name */
+  color: #fff; /* White color for better visibility */
+  text-transform: uppercase; /* Convert text to uppercase */
+  letter-spacing: 2px; /* Increase letter spacing for a bold appearance */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding a subtle shadow effect */
+  background: linear-gradient(to right, #fc6076, #ffd344); /* Adding gradient background */
+  -webkit-background-clip: text; /* Clipping text to the background */
+  /* -webkit-text-fill-color: transparent; Making text transparent */
+  animation: neonGlow 1.5s infinite alternate; /* Adding neon glow animation */
+}
+
+.brand-text2 {
+  margin-top: 0px;
+  margin-left: 45%;
+  font-family: cursive;
   font-size: 70px; /* Adjust font size as needed */
   text-align: center;
   margin-bottom: 30px; /* Add spacing below the brand name */
@@ -190,13 +123,9 @@ code {
   }
 }
 
-/* .bg5r{
-  position: absolute;
-} */
-
 .slogan{
-/* padding-top: 20px; */
-margin-left: 60%;
+padding-top: 20px;
+margin-left: 64%;
 }
 
 
@@ -209,18 +138,23 @@ margin-left: 60%;
   align-items: center;
   justify-content: space-around;
   list-style: none; 
-  padding: 10px;
-  background-color: #d68916;
+  background-color: #f1b355;
   font-weight: bolder;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.897);
   margin: 0px;
   font-size: 20px;
+  font-family: monospace;
 }
 
 .nav-icon {
   width: 15%; 
   height: auto;
-  vertical-align: middle; 
+  vertical-align: middle;
+  transition: transform 0.5s ease;
+}
+
+.nav-icon:hover{
+  transform: rotateY(10deg) scale(1.1);
 }
 
 .links{
@@ -239,7 +173,7 @@ margin-left: 60%;
 }
 
 .navbar-container {
-  /* position: sticky; */
+  position: sticky;
   top: 0;
   z-index: 1000;
 }
@@ -248,12 +182,13 @@ margin-left: 60%;
 .nav-link {
   text-decoration: none;
   color: #000000;
+  /* transition: transform 0.5s ease; */
 }
 
 .nav-link:hover {
   color: white;
+  /* transform: rotateY(10deg) scale(2); */
 }
-
 
 .footer {
   /* position: fixed; */
@@ -280,11 +215,11 @@ margin-left: 60%;
   height: 300px;
   width: 400px;
   position: absolute;
-  top: 25%;
+  top: 20%;
 }
 
-/*Product Page*/
 
+/*Product Page*/
 
 .products-full {
   position: relative;
@@ -298,7 +233,7 @@ margin-left: 60%;
   width: 100%;
   height: 100%;
   background-image: url('/public/bg1.png');
-  opacity: 0.3; /* Adjust opacity here */
+  opacity: 0.3; 
 }
 
 /* Optionally, you might want to ensure the content is above the pseudo-element */
@@ -309,7 +244,7 @@ margin-left: 60%;
 
 
 .products {
-  margin: 50px auto;
+  margin: 0 auto;
   max-width: 1500px;
   padding: 20px;
 }
@@ -320,6 +255,8 @@ margin-left: 60%;
   margin-bottom: 20px;
   text-align: center;
   color: #333;
+  font-family: fantasy ;
+  letter-spacing: 3px;
 }
 
 .products h2:hover{
@@ -330,16 +267,9 @@ margin-left: 60%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  /* width: 100%; */
 }
 
-/* .product-list p:hover{
-  color: white;
-} */
-
-
 .product {
-  /* width: 100%; */
   background-color: white;
   padding: 20px;
   border-radius: 15px;
@@ -349,7 +279,8 @@ margin-left: 60%;
 .product:hover {
   transform: translateY(-5px);
   box-shadow: 10px 12px 5px rgba(0, 0, 0, 0.432);
-  /* background-color: #ce9f58; */
+  border-right: 3px solid #e79e30; 
+  border-bottom: 3px solid #f1b355;
 }
 
 .product img {
@@ -396,6 +327,7 @@ margin-left: 60%;
 
 
 /*Register Page*/
+
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -404,7 +336,7 @@ margin-left: 60%;
   border-radius: 5px;
   background-color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.226);
-  min-height: 620px; /*thooku*/
+  min-height: 620px; 
   background-image: url('/public/reg.jpg');
   background-size: cover; /* Cover the entire container */
   background-position: center; 
@@ -428,17 +360,6 @@ margin-left: 60%;
 .container form label {
   font-weight: bold;
 }
-
-/* .container form input[type="text"],
-.container form input[type="email"],
-.container form input[type="password"] {
-  width: 30%;
-  padding: 10px;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  border-radius: 0;
-  outline: none;
-} */
 
 .container {
   display: flex;
@@ -496,6 +417,7 @@ margin-left: 60%;
 }
 
 /*Cart Page*/
+
 .cart {
   max-width: 1000px;
   margin: 0 auto;
