@@ -14,7 +14,7 @@ function ProductsPage() {
   return (
     <div className='products-full'>
     <div className="products">
-      <h2>SHOES</h2>
+      <h2>FORMAL SHOES</h2>
       <div className="product-list">
         {products3.map((product) => (
           <div key={product.id} className="product">

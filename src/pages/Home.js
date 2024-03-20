@@ -4,7 +4,13 @@ import ProductsPage from './ProductsPage';
 function HomePage() {
 
   const navigateToProductsPage = () => {
-    window.location.href = '/ProductsPage'; // Replace '/ProductsPage' with the actual URL of your ProductsPage
+    window.location.href = '/ProductsPage'; 
+  };
+  const navigateToProductsPage2 = () => {
+    window.location.href = '/ProductsPage2'; 
+  };
+  const navigateToProductsPage3 = () => {
+    window.location.href = '/ProductsPage3'; 
   };
   return (
    
@@ -20,11 +26,11 @@ function HomePage() {
       <div class='cont-1 smoke'>
 
         <div class="home-container">
-            <img src="b1.png" alt="Image 1" onClick={navigateToProductsPage}></img>
+            <img src="b1.png" alt="Image 1" onClick={navigateToProductsPage3}></img>
         </div>
 
         <div class="home-container">
-          <img src="b2.png" alt="Image 2" onClick={navigateToProductsPage}></img>
+          <img src="b2.png" alt="Image 2" onClick={navigateToProductsPage2}></img>
         </div>
 
         <div class="home-container">
@@ -35,7 +41,7 @@ function HomePage() {
           <img src="b4.png" alt="Image 4" onClick={navigateToProductsPage}></img>
         </div>  
       </div>
-  
+ 
       <div class='cont-2 smoke'>   
 
         <div class="home-container">
@@ -43,7 +49,7 @@ function HomePage() {
         </div>   
 
         <div class="home-container">
-          <img src="b6.png" alt="Image 6" onClick={navigateToProductsPage}></img>
+          <img src="b6.png" alt="Image 6" onClick={navigateToProductsPage2}></img>
         </div>
 
         <div class="home-container">

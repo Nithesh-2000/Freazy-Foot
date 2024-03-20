@@ -9,13 +9,26 @@ import Home from './pages/Home';
 import './index.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
+
 import { Dropdown } from '@mui/base/Dropdown';
 import { MenuButton } from '@mui/base/MenuButton';
 import { Menu } from '@mui/base/Menu';
-import { MenuItem } from '@mui/base/MenuItem';
+// import * as React from 'react';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 function Navigate() {
   const cart = useSelector((state) => state.cart);
+
+    const [products, setProduct] = React.useState('');
+  
+    const handleChange = (event) => {
+      setProduct(event.target.value);
+    };
+  
   
   return (
     <>
@@ -31,7 +44,7 @@ function Navigate() {
           </li>
         </div>
         <div className='links'>
-          <li>
+          {/* <li>
             <Link className="nav-link">Products </Link>
             <div className="dropdown-menu">
               <ul>
@@ -40,8 +53,25 @@ function Navigate() {
                 <li><Link to={'/ProductsPage3'} className="dropdown-link">Sports Shoes</Link></li>
               </ul>
             </div>
-          </li>
-          {/* Other navbar items */}
+          </li> */}
+          
+          <Box sx={{ minWidth: 120 }} className=''> 
+             <FormControl fullWidth className='form-drop'>
+                <InputLabel id="demo-simple-select-label" className='lab-drop'>Products</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={products}
+                    label="Products"
+                    onChange={handleChange}
+                    className="sel-drop"
+                  >
+                  <MenuItem value={10}><Link to={'/ProductsPage'} className="dropdown-link">Casual Shoes</Link></MenuItem>
+                  <MenuItem value={20}><Link to={'/ProductsPage2'} className="dropdown-link">Sports Shoes</Link></MenuItem>
+                  <MenuItem value={30}><Link to={'/ProductsPage3'} className="dropdown-link">Formal Shoes</Link></MenuItem>
+                  </Select>
+               </FormControl>
+          </Box>
           <li>
             <Link to={'/CartPage'} className="nav-link"> 
               <div className="cart-icon">

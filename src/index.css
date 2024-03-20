@@ -141,6 +141,12 @@ margin-left: 64%;
   z-index: 1;
 }
 
+/* .custom-select {
+  background-color: lightgray;
+  border-radius: 5px;
+  font-weight: bold;
+} */
+
 .nav-link:hover + .dropdown-menu {
   display: block;
   margin-top: 26px;
@@ -160,9 +166,23 @@ margin-left: 64%;
   background-color: #f0f0f0;
 }
 
+.box-drop{
+  font-family: monospace;
+  background-color: #f1b355;
+  color: black;
+  font-weight: bolder;
+}
+
+/* .demo-simple-select-label{
+  background-color: #f1b355;
+} */
+
 .dropdown-link {
   text-decoration: none;
   color: black;
+  font-family: cursive;
+  
+  /* background-color: #b36b00; */
 }
 
 .navbar-nav {
