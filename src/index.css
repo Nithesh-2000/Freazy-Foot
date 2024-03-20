@@ -197,7 +197,6 @@ margin-left: 64%;
   margin: 0px;
   font-size: 20px;
   font-family: monospace;
-  width: 100% !important;
 }
 
 .nav-icon {
@@ -390,7 +389,7 @@ margin-left: 64%;
   border-radius: 5px;
   background-color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.226);
-  min-height: 620px; 
+  min-height: 648px; 
   background-image: url('/public/reg.jpg');
   background-size: cover; /* Cover the entire container */
   background-position: center; 
@@ -485,7 +484,7 @@ margin-left: 64%;
   background-color: #b36b003d; /* Background color with 50% opacity */
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.226);
-  min-height: 622px; /* Adjust height as needed */
+  min-height: 650px; /* Adjust height as needed */
   background-image: url('/public/s-img3.png');
   /* background-image: url('/public/bg8.jpg'); */
   background-size: contain; /* Ensures the background image covers the entire element */
