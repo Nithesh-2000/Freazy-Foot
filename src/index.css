@@ -44,7 +44,9 @@ code {
 .home-body{
   background-image: url('/public/bg6.jpg');
   background-size: contain;
-  background-position: bottom;
+  background-position-y: bottom;
+  background-position-x: 1600px;
+  /* background-position: top ; */
 }
 
 .home-page {
@@ -222,7 +224,7 @@ margin-left: 64%;
 }
 
 .links li:last-child {
-  margin-right: 0;
+  margin-right: 10px;
 }
 
 .navbar-container {
@@ -323,6 +325,7 @@ margin-left: 64%;
 }
 
 .product {
+  margin-top: 30px;
   background-color: white;
   padding: 20px;
   border-radius: 15px;
@@ -586,3 +589,183 @@ margin-left: 64%;
 .ff{
   color: #ffffff;
 }
+
+
+.MuiFormControl-root{
+  margin-left: 20px;
+  /* background-color: #000000; */
+}
+
+.form-drop{
+  border: none;
+  margin-left: 20px;
+  /* background-color: red; */
+}
+
+.MuiInputBase{
+  color: red;
+}
+
+.MuiFormLabel{
+  color: red;
+  background-color: violet;
+}
+
+.MuiSelect-select{
+  color: violet;
+}
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  border: none !important;
+}
+
+.button1 {
+  background-color: #b36b00ab;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 575px;
+  font-weight: lighter;
+  font-family: fantasy ;
+  letter-spacing: 2px;
+  transition: transform 0.5s ease;
+}
+
+.button2 {
+  background-color: #b36b00ab;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+  font-weight: lighter;
+  font-family: fantasy ;
+  letter-spacing: 2px;
+  transition: transform 0.5s ease;
+}
+
+.button1:hover {
+  background-color: #333333ce;
+  transform: rotateY(10deg) scale(1.1);
+}
+
+.button2:hover {
+  background-color: #333333ce;
+  transform: rotateY(10deg) scale(1.1);
+}
+
+/*Login Page*/
+
+.container-log {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.226);
+  min-height: 648px; 
+  background-image: url('/public/reg.jpg');
+  background-size: cover; /* Cover the entire container */
+  background-position: center; 
+  justify-content: center;
+  align-items: center;
+}
+
+.container-log h2 {
+  text-align: center;
+}
+
+.container-log form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-log form div {
+  margin-bottom: 15px;
+}
+
+.container-log form label {
+  font-weight: bolder;
+}
+
+.container-log {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-log form {
+  width: 50%; /* Adjust as needed */
+}
+
+.container-log form input[type="text"],
+.container-log form input[type="email"],
+.container-log form input[type="password"] {
+  margin-top: 5px;
+  width: 100%; /* Take full width of the form */
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #b36b00;
+  border-radius: 0;
+  outline: none;
+  margin-bottom: 10px; /* Adjust spacing between input fields */
+  opacity: 50%;
+}
+
+.container-log h2 {
+
+  margin-right: 790px;
+  margin-bottom: 50px;
+  color: #b36b00;
+  font-family: "Helvetica Neue", Arial, sans-serif; /* Adjust the font family as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+.container-log p {
+    font-size: larger;
+    font-weight: 700;
+    margin-left: 360px;
+    margin-top: 30px;
+    color: #b36b00;
+}
+
+.buttonlog{
+  width: 100px;
+  align-items: center !important;
+  padding: 10px;
+  background-color: #eebc508c;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 400px;
+}
+
+.buttonnew{
+  width: 300px;
+  align-items: center !important;
+  padding: 10px;
+  background-color: #0201018c;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 310px;
+}
+
+.buttonlog:hover{
+  background-color: #b36b00;
+}
+
+.buttonnew:hover {
+  background-color: #000000;
+}
+

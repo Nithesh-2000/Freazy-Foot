@@ -10,7 +10,7 @@ const productsSlice = createSlice({
     { id: 5, name: 'Clarks Stanford Limit Black Leather', price: 2925, image: 'fs5.png' },
     { id: 6, name: 'Hush Puppies Mens Aaron Derby E 23Sneaker', price:  2098, image: 'fs6.png' },
     { id: 7, name: 'Liberty Mens HOL-125E Formal Lacing Shoes', price: 1079, image: 'fs7.png' },
-    { id: 8, name: 'Lee Cooper Mens Lc9254b1rDriving Style Loafer', price: 2519, image: 'fs8.png' },
+    { id: 8, name: 'Lee Cooper Mens Lc Driving Style Loafer', price: 2519, image: 'fs8.png' },
     { id: 9, name: 'Hush Puppies Mens Deen Oxford E Oxford', price: 2195, image: 'fs9.png' },
   ],
   reducers: {},

@@ -5,6 +5,7 @@ import ProductsPage2 from './pages/ProductsPage2';
 import ProductsPage3 from './pages/ProductsPage3';
 import CartPage from './pages/CartPage';
 import Register from './pages/register';
+import Login from './pages/login';
 import Home from './pages/Home';
 import './index.css';
 import { FaShoppingCart } from 'react-icons/fa';
@@ -44,17 +45,17 @@ function Navigate() {
           </li>
         </div>
         <div className='links'>
-          {/* <li>
-            <Link className="nav-link">Products </Link>
-            <div className="dropdown-menu">
+          <li>
+            <Link to={'/ProductsPage'} className="nav-link">Products </Link>
+            {/* <div className="dropdown-menu">
               <ul>
                 <li><Link to={'/ProductsPage'} className="dropdown-link">Formal Shoes</Link></li>
                 <li><Link to={'/ProductsPage2'} className="dropdown-link">Casual Shoes</Link></li>
                 <li><Link to={'/ProductsPage3'} className="dropdown-link">Sports Shoes</Link></li>
               </ul>
-            </div>
-          </li> */}
-          
+            </div> */}
+          </li>
+          {/* <li>
           <Box sx={{ minWidth: 120 }} className=''> 
              <FormControl fullWidth className='form-drop'>
                 <InputLabel id="demo-simple-select-label" className='lab-drop'>Products</InputLabel>
@@ -66,21 +67,22 @@ function Navigate() {
                     onChange={handleChange}
                     className="sel-drop"
                   >
-                  <MenuItem value={10}><Link to={'/ProductsPage'} className="dropdown-link">Casual Shoes</Link></MenuItem>
+                  <MenuItem value={10}><Link to={'/ProductsPage'} className="dropdown-link css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected ">Casual Shoes</Link></MenuItem>
                   <MenuItem value={20}><Link to={'/ProductsPage2'} className="dropdown-link">Sports Shoes</Link></MenuItem>
                   <MenuItem value={30}><Link to={'/ProductsPage3'} className="dropdown-link">Formal Shoes</Link></MenuItem>
                   </Select>
                </FormControl>
           </Box>
+          </li> */}
           <li>
             <Link to={'/CartPage'} className="nav-link"> 
               <div className="cart-icon">
-                <FaShoppingCart /><span>{cart.length}   My Cart</span> 
+                <FaShoppingCart /><span>{cart.length}</span> 
               </div>
             </Link>
           </li>
           <li>
-            <Link to={'/register'} className="nav-link">Register </Link>
+            <Link to={'/login'} className="nav-link">Login </Link>
           </li>
         </div>    
       </ul>
@@ -96,6 +98,7 @@ function Navigate() {
         <Route path="/ProductsPage3" element={<ProductsPage3 />} />
         <Route path="/CartPage" element={<CartPage />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
 
 
       </Routes>

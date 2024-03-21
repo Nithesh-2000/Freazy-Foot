@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../features/cart/cartSlice';
+import {  Link } from "react-router-dom";
 
 function ProductsPage() {
   const products3 = useSelector((state) => state.products3);
@@ -15,6 +16,8 @@ function ProductsPage() {
     <div className='products-full'>
     <div className="products">
       <h2>FORMAL SHOES</h2>
+      <Link to="/ProductsPage" ><button className="button1">CASUAL SHOES</button></Link>
+      <Link to="/ProductsPage2" ><button className="button2">SPORTS SHOES</button></Link>
       <div className="product-list">
         {products3.map((product) => (
           <div key={product.id} className="product">
@@ -25,7 +28,8 @@ function ProductsPage() {
             <h3>{product.name}</h3>
             <p><b>₹{product.price}</b></p>
             <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
-            <p>FREE Delivery by <b>Freazy-Foot</b></p>
+            {product.price > 2000 && <p>FREE Delivery by <b>Freazy-Foot</b></p>}
+            {product.price > 1000 && product.price < 2000 && <p>Only 50% Delivery charge by <b>Freazy-Foot</b></p>}
             </div>
           </div>
         ))}
