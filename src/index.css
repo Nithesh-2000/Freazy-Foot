@@ -366,7 +366,7 @@ margin-left: 64%;
 }
 
 
-.product button {
+.buttoncart {
   background-color: #b36b00ab;
   color: #fff;
   border: none;
@@ -375,10 +375,30 @@ margin-left: 64%;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
-.product button:hover {
+.buttoncart:hover {
   background-color: #b36b00;
+  transform: rotateY(10deg) scale(1.1);
+}
+
+.buttonbuy {
+  background-color: #0201018c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transition: transform 0.5s ease;
+  margin-left: 10px;
+}
+
+.buttonbuy:hover {
+  background-color: #000000;
+  transform: rotateY(10deg) scale(1.1);
 }
 
 
@@ -461,10 +481,12 @@ margin-left: 64%;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  transition: transform 0.5s ease;
 }
 
 .container form button:hover {
   background-color: #b36b00;
+  transform: rotateY(10deg) scale(1.1);
 }
 
 .errors {
@@ -564,6 +586,24 @@ margin-left: 64%;
   font-size: 20px;
   margin-top: 20px;
   text-align: right;
+}
+
+.buttonbuycart{
+  background-color: #0201018c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transition: transform 0.5s ease;
+  margin-top: 10px;
+  margin-left: 886px;
+}
+
+.buttonbuycart:hover{
+  background-color: #000000;
 }
 
 /*banner*/
@@ -721,7 +761,7 @@ margin-left: 64%;
 
 .container-log h2 {
 
-  margin-right: 790px;
+  margin-right: 700px;
   margin-bottom: 50px;
   color: #b36b00;
   font-family: "Helvetica Neue", Arial, sans-serif; /* Adjust the font family as needed */
@@ -747,6 +787,7 @@ margin-left: 64%;
   border-radius: 3px;
   cursor: pointer;
   margin-left: 400px;
+  transition: transform 0.5s ease;
 }
 
 .buttonnew{
@@ -759,13 +800,22 @@ margin-left: 64%;
   border-radius: 3px;
   cursor: pointer;
   margin-left: 310px;
+  transition: transform 0.5s ease;
 }
 
 .buttonlog:hover{
   background-color: #b36b00;
+  transform: rotateY(10deg) scale(1.1);
 }
 
 .buttonnew:hover {
   background-color: #000000;
+  transform: rotateY(10deg) scale(1.1);
+}
+
+/***Checkout Page***/
+
+.checkout-body{
+  min-height: 650px;
 }
 
