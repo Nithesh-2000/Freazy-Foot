@@ -7,7 +7,6 @@ import CartPage from './pages/CartPage';
 import Register from './pages/register';
 import Login from './pages/login';
 import Home from './pages/Home';
-import CheckoutPage from './pages/CheckoutPage';
 import './index.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
@@ -100,7 +99,6 @@ function Navigate() {
         <Route path="/CartPage" element={<CartPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/CheckoutPage" element={<CheckoutPage />} />
 
 
       </Routes>
