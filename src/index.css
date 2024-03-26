@@ -366,7 +366,7 @@ margin-left: 64%;
 }
 
 
-.product button {
+.buttoncart {
   background-color: #b36b00ab;
   color: #fff;
   border: none;
@@ -375,10 +375,30 @@ margin-left: 64%;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
-.product button:hover {
+.buttoncart:hover {
   background-color: #b36b00;
+  transform: rotateY(10deg) scale(1.1);
+}
+
+.buttonbuy {
+  background-color: #333333ce;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+  transition: transform 0.5s ease;
+}
+
+.buttonbuy:hover {
+  background-color: black;
+  transform: rotateY(10deg) scale(1.1);
 }
 
 
@@ -461,10 +481,12 @@ margin-left: 64%;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  transition: transform 0.5s ease;
 }
 
 .container form button:hover {
   background-color: #b36b00;
+  transform: rotateY(10deg) scale(1.1);
 }
 
 .errors {
@@ -564,6 +586,26 @@ margin-left: 64%;
   font-size: 20px;
   margin-top: 20px;
   text-align: right;
+  margin-right: 20px;
+}
+
+.buttonbuycart{
+  background-color: #333333ce;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 25px;
+  margin-left: 868px;
+  transition: transform 0.5s ease;
+}
+
+.buttonbuycart:hover {
+  background-color: black;
+  transform: rotateY(10deg) scale(1.1);
 }
 
 /*banner*/
@@ -747,6 +789,7 @@ margin-left: 64%;
   border-radius: 3px;
   cursor: pointer;
   margin-left: 400px;
+  transition: transform 0.5s ease;
 }
 
 .buttonnew{
@@ -759,13 +802,136 @@ margin-left: 64%;
   border-radius: 3px;
   cursor: pointer;
   margin-left: 310px;
+  transition: transform 0.5s ease;
 }
 
 .buttonlog:hover{
   background-color: #b36b00;
+  transform: rotateY(10deg) scale(1.1);
 }
 
 .buttonnew:hover {
   background-color: #000000;
+  transform: rotateY(10deg) scale(1.1);
 }
+
+
+/***Checkout Page***/
+
+
+.checkout-body {
+  
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.checkout {
+  display: flex;
+  justify-content: center;
+}
+
+.checkout h2 {
+  margin-top: 0;
+}
+
+.user-details {
+  margin-left: 15px;
+  width: 35%;
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary{
+  margin-left: 15px;
+  width: 35%;
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-details{
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 20%;
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.use-address-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.use-address-btn:hover {
+  background-color: #0056b3;
+}
+
+.place-order button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.place-order button:hover {
+  background-color: #218838;
+}
+
+.paycards{
+  display: flex;
+  margin-top: 10px;
+}
+
+.visa{
+  width: 90px;
+  height: 45px;
+  margin-left: 10px;
+}
+
+.master{
+  width: 90px;
+  height: 45px;
+  margin-left: 10px;
+}
+
+.rupay{
+  width: 90px;
+  height: 45px;
+  margin-left: 10px;
+}
+
 

@@ -5,6 +5,7 @@ import ProductsPage2 from './pages/ProductsPage2';
 import ProductsPage3 from './pages/ProductsPage3';
 import CartPage from './pages/CartPage';
 import Register from './pages/register';
+import CheckoutPage from './pages/CheckoutPage';
 import Login from './pages/login';
 import Home from './pages/Home';
 import './index.css';
@@ -99,6 +100,8 @@ function Navigate() {
         <Route path="/CartPage" element={<CartPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/CheckoutPage" element={<CheckoutPage />} />
+
 
 
       </Routes>
