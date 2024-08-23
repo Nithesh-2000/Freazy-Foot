@@ -204,7 +204,7 @@ margin-left: 64%;
 .nav-icon {
   width: 15%; 
   height: auto;
-  vertical-align: middle;
+  vertical-align: middle; 
   transition: transform 0.5s ease;
 }
 
@@ -832,9 +832,20 @@ margin-left: 64%;
   justify-content: center;
 }
 
-.checkout h2 {
+.checkout-body h2 {
   margin-top: 0;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  font-family: fantasy ;
+  letter-spacing: 3px;
 }
+
+.checkout-body h2:hover {
+  color: #b36b00;
+}
+
 
 .user-details {
   margin-left: 15px;
@@ -844,6 +855,9 @@ margin-left: 64%;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image: url('/public/cbg13crop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .order-summary{
@@ -854,6 +868,9 @@ margin-left: 64%;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image: url('/public/bg8.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .payment-details{
@@ -865,10 +882,53 @@ margin-left: 64%;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image: url('/public/cbg14.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.form-group {
+.user-details h3{
+  margin-top: 0;
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  letter-spacing: 3px;
+}
+
+.order-summary h3{
+  margin-top: 0;
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  letter-spacing: 3px;
+}
+
+.payment-details h3{
+  margin-top: 0;
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  letter-spacing: 3px;
+}
+
+.form-group  {
   margin-bottom: 15px;
+  font-weight: bold;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+.payment-methods {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
 
 label {
@@ -934,4 +994,9 @@ input[type="text"] {
   margin-left: 10px;
 }
 
+.imgdis{
+  width: 90px;
+  height: 45px;
+  margin-top: 30px;
+}
 

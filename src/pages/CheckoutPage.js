@@ -5,7 +5,11 @@ import { useNavigate } from 'react-router-dom';
 function CheckoutPage() {
   const cart = useSelector((state) => state.cart);
   const navigate = useNavigate();
-  const [paymentMethod, setPaymentMethod] = useState('credit card');
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState({
+    method: 'debitcreditatm',
+    image: 'visa.png' // Default image
+  }); 
+  const [showCardFields, setShowCardFields] = useState(false); // State to control visibility of card fields
   const [userDetails, setUserDetails] = useState({
     country: '',
     fullName: '',
@@ -19,8 +23,10 @@ function CheckoutPage() {
     state: ''
   });
 
-  const handlePaymentMethodChange = (method) => {
-    setPaymentMethod(method);
+  const handlePaymentMethodChange = (method, image) => {
+    setSelectedPaymentMethod({ method, image });
+    // Show card fields if payment method is debit/credit/ATM card
+    setShowCardFields(method === 'debitcreditatm');
   };
 
   const handleUserDetailsChange = (e) => {
@@ -48,7 +54,7 @@ function CheckoutPage() {
 
   return (
     <div className='checkout-body'>
-      <h2>Checkout</h2>
+      <h2>CHECKOUT</h2>
       <div className="checkout">
         <div className="user-details">
           <h3>User Details</h3>
@@ -91,7 +97,7 @@ function CheckoutPage() {
             </div>
             <div className="form-group">
               <label>State</label>
-              <input type="text" name="fullName" value={userDetails.fullName} onChange={handleUserDetailsChange} />
+              <input type="text" name="state" value={userDetails.state} onChange={handleUserDetailsChange} />
             </div>
             <button type="button" className='use-address-btn' onClick={handleUseAddress}>Use this address</button>
           </form>
@@ -116,49 +122,68 @@ function CheckoutPage() {
           <div className="payment-methods">
             <label>
               <input
-                type="radio"
-                value="debitcreditatm"
-                checked={paymentMethod === 'debitcreditatm'}
-                onChange={() => handlePaymentMethodChange('debitcreditatm')}
+                 type="radio"
+                 value="debitcreditatm"
+                 checked={selectedPaymentMethod.method === 'debitcreditatm'}
+                 onChange={() => handlePaymentMethodChange('debitcreditatm', 'visa.png')}
               />
               Debit/Credit/ATM Card
               <div className='paycards'>
-              <img className='visa' src="visa.png" alt="Image 1" />
-              <img className='master' src="master.png" alt="Image 2" />
-              <img className='rupay' src="rupay.png" alt="Image 3" />
+              <img className='visa' src="visa.png" alt="Visa" onClick={() => handlePaymentMethodChange('debitcreditatm', 'visa.png')} />
+              <img className='master' src="master.png" alt="Mastercard" onClick={() => handlePaymentMethodChange('debitcreditatm', 'master.png')} />
+              <img className='rupay' src="rupay.png" alt="Rupay" onClick={() => handlePaymentMethodChange('debitcreditatm', 'rupay.png')} />
               </div>
             </label>
             <label>
-              <input
-                type="radio"
-                value="netbanking"
-                checked={paymentMethod === 'netbanking'}
-                onChange={() => handlePaymentMethodChange('netbanking')}
-              />
-              Net Banking
+                <input
+                  type="radio"
+                  value="netbanking"
+                  checked={selectedPaymentMethod.method === 'netbanking'}
+                  onChange={() => handlePaymentMethodChange('netbanking')}
+                />
+                Net Banking
             </label>
             <label>
-              <input
-                type="radio"
-                value="EMI"
-                checked={paymentMethod === 'EMI'}
-                onChange={() => handlePaymentMethodChange('EMI')}
-              />
-              EMI
+                <input
+                  type="radio"
+                  value="EMI"
+                  checked={selectedPaymentMethod.method === 'EMI'}
+                  onChange={() => handlePaymentMethodChange('EMI')}
+                />
+                EMI
             </label>
             <label>
-              <input
-                type="radio"
-                value="payon"
-                checked={paymentMethod === 'payon'}
-                onChange={() => handlePaymentMethodChange('payon')}
-              />
-              Pay on Delivery (Cash/UPI/Card)
+                <input
+                  type="radio"
+                  value="payon"
+                  checked={selectedPaymentMethod.method === 'payon'}
+                  onChange={() => handlePaymentMethodChange('payon')}
+                />
+                Pay on Delivery (Cash/UPI/Card)
             </label>
           </div>
+          {showCardFields && (
+            <div className="card-fields">
+              <div className="selected-payment-method">
+                <img className='imgdis' src={selectedPaymentMethod.image} alt={selectedPaymentMethod.method} />
+              </div>
+              <div className="form-group">
+                <label>Card Number</label>
+                <input type="text" name="cardNumber" />
+              </div>
+              <div className="form-group">
+                <label>CVV</label>
+                <input type="text" name="cvv" />
+              </div>
+              <div className="form-group">
+                <label>Expiry Date</label>
+                <input type="text" name="expiryDate" />
+              </div>
+            </div>
+          )}
           <div className="place-order">
-          <button onClick={handlePlaceOrder}>Place Order</button>
-        </div>
+            <button onClick={handlePlaceOrder}>Place Order</button>
+          </div>
         </div>
       </div>
     </div>
